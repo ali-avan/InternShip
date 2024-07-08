@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #000000;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 30px;
+    color: rgb(233, 233, 233);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: rgb(206, 202, 202);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: rgb(72, 210, 57);
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.Home {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10%;
+    background: url('images/img.png') no-repeat left center;
+    background-size: contain;
+}
+
+.Home-content {
+    max-width: 40%;
+}
+
+.Home-content h1 {
+    font-size: 56px;
+    font-weight: 600;
+}
+
+.Home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(29, 220, 73);
+}
+
+.Home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.Home-content .btn-box {
+    width: 345px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-box a {
+    display: inline-flex;
+    position: relative;
+    width: 150px;
+    height: 100%;
+    background-color: rgb(34, 146, 9);
+    border: 2px solid rgb(7, 96, 35);
+    border-radius: 8px;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: black;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: rgb(34, 146, 9);
+}
+
+.btn-box a:nth-child(2):hover {
+    color: black;
+}
+
+.btn-box a:nth-child(2)::before {
+    color: rgb(34, 146, 9);
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(177, 187, 174);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.Home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Home-sci a {
+    display: inline-flex;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 3px solid rgb(34, 146, 9);
+    border-radius: 50%;
+    font-size: 18px;
+    color: rgb(101, 186, 92);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.Home-sci a:hover {
+    color: rgb(246, 246, 246);
+    border: 3px solid rgb(248, 248, 248);
+}
+
+.About {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20%;
+    background-color: #000000;
+    min-height: 100vh;
+}
+
+.About-content {
+    max-width: 100%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.About-content h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: rgb(101, 186, 92);
+}
+
+.About-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+.services {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 10%;
+    background-color: #000000;
+}
+
+.services-content {
+    max-width: 60%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.services-content h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: rgb(101, 186, 92);
+}
+
+.services-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.portfolio {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 10%;
+    background-color: #000000;
+}
+
+.portfolio-content {
+    max-width: 60%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.portfolio-content h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: rgb(101, 186, 92);
+}
+
+.portfolio-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contact {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 10%;
+    background-color: #000000;
+}
+
+.contact-content {
+    max-width: 60%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.contact-content h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: rgb(101, 186, 92);
+}
+
+.contact-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.services-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Adjust gap as needed */
+    justify-content: center;
+    /* Center align the buttons */
+    margin-top: 30px;
+    /* Adjust margin as needed */
+}
+
+.services-buttons a {
+    display: inline-flex;
+    position: relative;
+    padding: 15px 30px;
+    /* Adjust padding as needed */
+    background-color: rgb(65, 150, 46);
+    border: 2px solid rgb(7, 96, 35);
+    border-radius: 8px;
+    font-size: 18px;
+    color: rgb(70, 155, 39);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.services-buttons a:hover {
+    color: #000000;
+    background-color: #ffffff;
+    /* Optional: change background color on hover */
+}
+
+.services-buttons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    transition: .5s;
+}
+
+.services-buttons a:hover::before {
+    width: 100%;
+}
+
+.about-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Adjust gap as needed */
+    justify-content: center;
+    /* Center align the buttons */
+    margin-top: 30px;
+    /* Adjust margin as needed */
+}
+
+.about-buttons a {
+    display: inline-flex;
+    position: relative;
+    padding: 15px 30px;
+    /* Adjust padding as needed */
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(7, 96, 35);
+    border-radius: 8px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.about-buttons a:hover {
+    color: #000000;
+    background-color: #000000;
+    /* Optional: change background color on hover */
+}
+
+.about-buttons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    transition: .5s;
+}
+
+.about-buttons a:hover::before {
+    width: 100%;
+}
+
+/* General Section Styles */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 10%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    min-height: 100vh;
+    /* Ensure sections take up full viewport height */
+}
+
+.portfolio-content {
+    max-width: 60%;
+    text-align: center;
+}
+
+/* Buttons Container */
+.portfolio-buttons,
+.services-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Adjust gap as needed */
+    justify-content: center;
+    /* Center align the buttons */
+    margin-top: 30px;
+    /* Adjust margin as needed */
+}
+
+.portfolio-buttons a,
+.services-buttons a {
+    display: inline-flex;
+    position: relative;
+    padding: 20px 40px;
+    /* Adjust padding as needed */
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(7, 96, 35);
+    border-radius: 8px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    flex-direction: column;
+    /* Stack text and paragraph vertically */
+    text-align: center;
+    /* Center align text */
+}
+
+.portfolio-buttons a:hover,
+.services-buttons a:hover {
+    color: #000000;
+    background-color: #000000;
+    /* Optional: change background color on hover */
+}
+
+.portfolio-buttons a::before,
+.services-buttons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    transition: .5s;
+}
+
+.portfolio-buttons a:hover::before,
+.services-buttons a:hover::before {
+    width: 100%;
+}
+
+.portfolio-buttons a p {
+    margin: 10px 0 0 0;
+    /* Adjust margin for paragraph inside the buttons */
+    font-size: 16px;
+    /* Adjust font size for paragraph */
+    line-height: 1.5;
+    /* Adjust line height for paragraph */
+}
